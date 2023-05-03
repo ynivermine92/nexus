@@ -1,0 +1,70 @@
+.top{
+    &__wrapper{
+        background-image: url('../img/top/top.jpg');
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        padding-top: 615px;
+        background-size: 100%;
+        width: 100%;
+        height: 1056px;
+
+    }
+    &__conent{
+        display: flex;
+    }
+    h1{
+        line-height: 96px;
+        font-size: 80px;
+        max-width: 861px;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+    }
+    .text{
+      @extend %text;
+      max-width: 450px;
+      
+    }
+    &__user-verification{
+     display: flex;
+     flex-direction: column;
+     max-width: 260px;
+     width: 100%;
+     margin-top: 200px;
+    }
+    &__link-verification{
+        margin-top: 0px;
+        color: #FE8235;
+        background-color: transparent;
+        border: 2px solid #FE8235;
+        font-size: 22px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-top: 20px;
+        max-width: 260px;
+        padding: 24px 8px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        transition: 0.5s;
+        &:hover{
+            max-width: 260px;
+            background-color: #FE8235;
+            padding: 24px 8px;
+            color: #ffff;
+            font-size: 22px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            transition: 0.5s;
+        }
+    }
+    &__link-verification + .top__link-verification{
+        margin-top: 20px;
+    }
+    &__supporting{
+        height: 248px; 
+        background: #7FFA8A; 
+    }
+
+}
