@@ -15,6 +15,21 @@
         width: 100%;
         z-index: 2;
     }
+    .burger{
+        &::after,&::before{
+            background: #bdb9b9;
+        }
+        span{
+            background: #bdb9b9;
+        }
+    }
+    .menu.active{
+        top: -30px;
+        padding-bottom: 140px;
+    }
+    .menu__item-link{
+        font-size: 20px;
+    }
 }
 .navbar {
     display: flex;
@@ -112,8 +127,9 @@
         position: relative;
         height: 20px;
         width: 30px;
-
         &.active {
+            position: absolute;
+            right: 79px;
             &:before {
                 background: $burgerActiveColor;
                 transform: rotate(45deg);
@@ -168,10 +184,11 @@
     width: 30px;
     height: 30px;
     margin-left: 30px;
-    fill: #7a7878;
+    fill: #bdb9b9;
     transition: 0.5s;
     &:hover{
         fill: #fffafa;
         transition: 0.5s;
     }
 }
+
