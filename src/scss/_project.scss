@@ -1,0 +1,75 @@
+.project {
+    &__title {
+        padding-top: 150px;
+        @extend %title;
+        max-width: 500px;
+    }
+
+    &__text {
+        font-size: 32px;
+        @extend %Medium;
+        max-width: 684px;
+        padding-top: 30px;
+    }
+
+    &__advantage-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px 40px;
+        padding-top: 30px;
+    }
+
+    &__advantage-item { 
+        width: 360px;
+        height: 264px;
+        background: #5224B5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.5s;
+        &:hover{
+            background: #FE8235;
+            transition: 0.5s;
+            .project__advantage-svg{
+                fill:#000000;
+            }
+            .project__advantage-text{
+                color:#0A0A0A;
+            }
+        }
+    }
+    &__advantage-text{
+        font-size: 24px;
+        text-align: center;
+        max-width: 250px;
+        line-height: 120%;
+        @extend %Medium;
+    }
+    &__advantage-svg{
+       height: 72px;
+       width: 72px;
+       margin-bottom: 27px;
+       fill:#FE8235
+    }
+
+    &__benefit-wrapper{
+        display: flex;
+        justify-content:space-between;
+    }
+    &__benefit-title{
+        @extend %title;
+        max-width: 600px;
+    }
+    &__benefit-text{
+        font-size: 36px;
+        padding-top: 30px;
+        max-width: 320px;
+        padding-bottom: 80px;
+        @extend %Medium;
+    }
+    &__benefit-text:last-child{
+        max-width: 470px;
+        font-size: 32px;
+    }
+}

@@ -26,6 +26,7 @@
 body {
     @extend %Ultrabold;
     color: #ffff;
+    background: #0A0A0A;
     &.locked {
         overflow: hidden;
     }

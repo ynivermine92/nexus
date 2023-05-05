@@ -1,6 +1,6 @@
 // Custom Scripts
 // Мобильное меню бургер
-function burgerMenu() {
+/* function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
     const body = document.querySelector('body')
@@ -24,7 +24,7 @@ function burgerMenu() {
         }
     })
 }
-burgerMenu()
+burgerMenu() */
 
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
     const header = document.querySelector(headerSelector),
