@@ -1,6 +1,7 @@
 .project {
     &__title {
         padding-top: 150px;
+
         @extend %title;
         max-width: 500px;
     }
