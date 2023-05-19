@@ -1,0 +1,194 @@
+// ========================= [ Header styles ] =========================
+.header {
+    margin-top: 30px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left:50%;
+    width: 100%;
+    max-width: 1140px;
+    transform:translate(-50%, -50%);
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .burger{
+        &::after,&::before{
+            background: #bdb9b9;
+        }
+        span{
+            background: #bdb9b9;
+        }
+    }
+    .menu.active{
+        top: -30px;
+        padding-bottom: 140px;
+    }
+    .menu__item-link{
+        font-size: 20px;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 104px;
+    max-width: 144px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1140px;
+    background: #0A0A0A;
+    opacity: 0.7;
+
+}
+.logo {
+    a {
+        color: white;
+    }
+}
+
+// ========================== [ Menu styles ] ==========================
+.menu {
+    display: flex;
+    gap: 31px;
+
+    // .menu__item
+    &__item {
+        display: flex;
+        position: relative;
+    }
+
+    // .menu__item-link
+    &__item-link {
+        color: #939393;
+        display: flex;
+        position: relative;
+        transition: 0.5s color;
+        font-size: 15px;
+        @extend %Medium;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -3px;
+            background: #131418;
+            height: 1px;
+            width: 100%;
+            transform: scale(0);
+            transition: 0.5s transform;
+
+            // Comment if you need border animation
+            display: none;
+        }
+        &:hover {
+            color: #FFFFFF;
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    // Mobile menu styles
+    @media screen and (max-width: $burgerBreakpoint) {
+        position: fixed;
+        background: $burgerColor;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &.active {
+            display: flex;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            pointer-events: all;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            animation: fade 0.1s linear;
+        }
+    }
+}
+
+// ========================= [ Burger styles ] =========================
+.burger {
+    display: none;
+    background: transparent;
+    z-index: 3;
+    @media screen and (max-width: $burgerBreakpoint) {
+        display: flex;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        &.active {
+            position: absolute;
+            right: 79px;
+            &:before {
+                background: $burgerActiveColor;
+                transform: rotate(45deg);
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                top: 8px;
+            }
+
+            &:after {
+                background: $burgerActiveColor;
+                transform: rotate(-45deg);
+                bottom: 10px;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            }
+
+            & span {
+                transform: scale(0);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $burgerColor;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            width: 100%;
+            background: $burgerColor;
+            height: 2px;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+    }
+}
+
+.menu__item-linksvg{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    fill: #bdb9b9;
+    transition: 0.5s;
+    &:hover{
+        fill: #fffafa;
+        transition: 0.5s;
+    }
+}
+
