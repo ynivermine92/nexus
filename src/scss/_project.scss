@@ -20,105 +20,123 @@
         padding-top: 30px;
     }
 
-    &__advantage-item { 
+    &__advantage-item {
         width: 360px;
         height: 264px;
         background: #5224B5;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         flex-direction: column;
         transition: 0.5s;
-        &:hover{
+
+        &:hover {
             background: #FE8235;
             transition: 0.5s;
-            .project__advantage-svg{
-                fill:#000000;
+
+            .project__advantage-svg {
+                fill: #000000;
             }
-            .project__advantage-text{
-                color:#0A0A0A;
+
+            .project__advantage-text {
+                color: #0A0A0A;
             }
         }
     }
-    &__advantage-text{
+
+    &__advantage-text {
         font-size: 24px;
         text-align: center;
         max-width: 250px;
         line-height: 120%;
         @extend %Medium;
     }
-    &__advantage-svg{
-       height: 72px;
-       width: 72px;
-       margin-bottom: 27px;
-       fill:#FE8235
+
+    &__advantage-svg {
+        height: 72px;
+        width: 72px;
+        margin-bottom: 27px;
+        fill: #FE8235
     }
 
-    &__benefit-wrapper{
+    &__benefit-wrapper {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
     }
-    &__benefit-title{
+
+    &__benefit-title {
         @extend %title;
         max-width: 600px;
     }
-    &__benefit-text{
+
+    &__benefit-text {
         font-size: 36px;
         padding-top: 30px;
         max-width: 320px;
         padding-bottom: 80px;
         @extend %Medium;
     }
-    &__benefit-text:last-child{
+
+    &__benefit-text:last-child {
         max-width: 470px;
         font-size: 32px;
     }
-    &__NFT-name{
+
+    &__NFT-name {
         color: #fff;
     }
 
 }
 
-@media (max-width:1300px){
-    .project{
-        &__advantage-items{
+@media (max-width:1300px) {
+    .project {
+        &__advantage-items {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
     }
 }
-@media (max-width:950px){
-    .project{
-        &__advantage-item{
+
+@media (max-width:950px) {
+    .project {
+        &__advantage-item {
             width: 100%;
         }
-        &__benefit-wrapper{
+
+        &__benefit-wrapper {
             flex-direction: column;
         }
-        &__benefit-text{
+
+        &__benefit-text {
             max-width: 100% !important;
         }
-        &__text{
+
+        &__text {
             max-width: 100%;
             padding-bottom: 50px;
         }
-        &__title{
+
+        &__title {
             padding-top: 50px;
         }
-        &__benefit-title{
-            padding-top: 50px;;
-        }
-    }
-}
-@media (max-width:400px){
-    .project{
-        &__title{
-            font-size: 38px;
-        }
-        &__benefit-title{
-            font-size: 38px;
+
+        &__benefit-title {
+            padding-top: 50px;
+            ;
         }
     }
 }
 
+@media (max-width:400px) {
+    .project {
+        &__title {
+            font-size: 38px;
+        }
+
+        &__benefit-title {
+            font-size: 38px;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 
-/////////////* searsh //////////////////////
 .search {
     padding: 18px;
     background: #252525;
@@ -7,53 +6,59 @@
     justify-content: end;
     cursor: pointer;
     fill: #ffff;
-    &.active{
+
+    &.active {
         background: #7ffa8a;
-        box-shadow: 20px 0 60px 0 rgba(238,235,239,.35);
-        .menu__item-linksvg{
+        box-shadow: 20px 0 60px 0 rgba(238, 235, 239, .35);
+
+        .menu__item-linksvg {
             fill: #0a0a0a;
         }
     }
+
     .menu__item-linksvg {
         margin-left: 0px;
     }
 }
-.tabs__input{
+
+.tabs__input {
     font-size: 20px;
     @extend %Ultrabold;
     display: none;
 }
 
-.tabs__input.none{
+.tabs__input.none {
     display: none;
     font-size: 26px;
     animation-duration: 0.8s;
     animation-name: remove;
     width: 80%;
     margin-left: 466px;
+
     @keyframes remove {
         from {
             margin-left: 0px;
             border: none;
             padding-left: 30px;
         }
-      }
+    }
 
 }
- .tabs__input.block{
+
+.tabs__input.block {
     width: 80%;
     border: block;
     animation-duration: 0.8s;
     animation-name: add;
-    outline:none;
+    outline: none;
     padding-left: 30px;
     display: block;
     margin-left: 0px;
+
     @keyframes add {
         from {
             margin-left: 300px;
         }
-      
-      }
-} 
-/////////////* searsh //////////////////////*/
+
+    }
+}

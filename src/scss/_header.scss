@@ -4,10 +4,11 @@
     position: absolute;
     z-index: 1;
     top: 50px;
-    left:50%;
+    left: 50%;
     width: 100%;
     max-width: 1140px;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
     &.fixed {
         position: fixed;
         left: 0;
@@ -15,22 +16,29 @@
         width: 100%;
         z-index: 2;
     }
-    .burger{
-        &::after,&::before{
+
+    .burger {
+
+        &::after,
+        &::before {
             background: #bdb9b9;
         }
-        span{
+
+        span {
             background: #bdb9b9;
         }
     }
-    .menu.active{
+
+    .menu.active {
         top: -30px;
         padding-bottom: 140px;
     }
-    .menu__item-link{
+
+    .menu__item-link {
         font-size: 20px;
     }
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,6 +52,7 @@
     opacity: 0.7;
 
 }
+
 .logo {
     a {
         color: white;
@@ -69,6 +78,7 @@
         transition: 0.5s color;
         font-size: 15px;
         @extend %Medium;
+
         &:after {
             position: absolute;
             content: '';
@@ -83,8 +93,10 @@
             // Comment if you need border animation
             display: none;
         }
+
         &:hover {
             color: #FFFFFF;
+
             &:after {
                 transform: scale(1);
             }
@@ -122,14 +134,17 @@
     display: none;
     background: transparent;
     z-index: 3;
+
     @media screen and (max-width: $burgerBreakpoint) {
         display: flex;
         position: relative;
         height: 20px;
         width: 30px;
+
         &.active {
             position: absolute;
             right: 79px;
+
             &:before {
                 background: $burgerActiveColor;
                 transform: rotate(45deg);
@@ -180,15 +195,53 @@
     }
 }
 
-.menu__item-linksvg{
+.menu__item-linksvg {
     width: 30px;
     height: 30px;
     margin-left: 30px;
     fill: #bdb9b9;
     transition: 0.5s;
-    &:hover{
+
+    &:hover {
         fill: #fffafa;
         transition: 0.5s;
     }
 }
 
+@media (max-width:500px) {
+    .header {
+        .container {
+            padding: 0;
+        }
+    }
+
+    .logo {
+        img {
+            width: 120px;
+        }
+    }
+
+    .menu {
+        &__item-linksvg {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+@media (max-width:400px) {
+    .menu {
+        &__menu__item-linksvg {
+            margin-left: 10px;
+        }
+
+        &__item-linksvg {
+            margin-left: 10px;
+        }
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+}

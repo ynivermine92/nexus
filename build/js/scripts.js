@@ -1,27 +1,43 @@
 // Custom Scripts
-
-
+// accordion
+function accordion() {
+    const items = document.querySelectorAll('.accordion__item-trigger')
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentNode
+            if (parent.classList.contains('accordion__item-active')) {
+                parent.classList.remove('accordion__item-active')
+            } else {
+                document
+                    .querySelectorAll('.accordion__item')
+                    .forEach(child => child.classList.remove('accordion__item-active'))
+                parent.classList.add('accordion__item-active')
+            }
+        })
+    })
+}
+accordion()
 
 let search = document.querySelector('.search');
 let tabsInput = document.querySelector('.tabs__input');
 
-search.addEventListener('click',() =>{
+search.addEventListener('click', () => {
 
     search.classList.toggle('active')
-    if(search.classList.contains('active')){
+    if (search.classList.contains('active')) {
         tabsInput.classList.remove('none')
         tabsInput.classList.add('block')
-    }else{
+    } else {
         tabsInput.classList.remove('block')
         tabsInput.classList.add('none')
     }
 })
 
-
- function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
+//tabs
+function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
     const header = document.querySelector(headerSelector),
-          tab = document.querySelectorAll(tabSelector),
-          content = document.querySelectorAll(contentSelector)
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector)
     function hideTabContent() {
         content.forEach(item => {
             item.style.display = 'none'
@@ -31,33 +47,28 @@ search.addEventListener('click',() =>{
         });
     }
     function showTabContent(i = 0) {
-       content[i].style.display = display
-       tab[i].classList.add(activeClass)
+        content[i].style.display = display
+        tab[i].classList.add(activeClass)
     }
     hideTabContent()
     showTabContent()
     header.addEventListener('click', e => {
         const target = e.target
-        if (target.classList.contains(tabSelector.replace(/\./, '')) || 
-        target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
+        if (target.classList.contains(tabSelector.replace(/\./, '')) ||
+            target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
             tab.forEach((item, i) => {
-                if ( target == item || target.parentNode == item ) {
+                if (target == item || target.parentNode == item) {
                     hideTabContent()
                     showTabContent(i)
                 }
             });
         }
     })
-} 
-
-// ПЕРВЫЙ аргумент - класс всего нашего хедера табов.
-// ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
-// ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
-// ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
-tabs( '.tabs__header' ,'.tabs__header-item', '.tabs__content-item', 'active')
+}
+tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
 
 
-// Мобильное меню бургер
+//  burgerMenu
 function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')

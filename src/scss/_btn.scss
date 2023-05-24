@@ -1,1 +1,49 @@
 
+input::-webkit-input-placeholder {
+    color: #FE8235;
+    
+}
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #FE8235;
+}
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #FE8235;
+}
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #FE8235;
+}
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid  #FE8235;
+  -webkit-text-fill-color:  #FE8235;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

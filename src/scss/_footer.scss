@@ -1,4 +1,152 @@
 // Footer
-footer {
-    display: block;
+.footer {
+    padding: 90px 140px;
+    background: #5224B5;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__adris {
+        padding-top: 30px;
+        font-size: 15px;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        max-width: 185px;
+        @extend %Medium;
+    }
+
+    &__menu-items {
+        padding-top: 10px;
+        margin-bottom: 16px;
+        font-size: 22px;
+        letter-spacing: 0.02em;
+    }
+
+    &__menu-item {
+        margin-top: 30px;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        @extend %Medium;
+
+    }
+
+    &__menu-item+&__menu-item {
+        margin: 15px 0px;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+
+    }
+
+    &__menu-link {
+        color: #ffff;
+        transition: all 0.5s;
+
+        &:hover {
+            border-bottom: 1px solid#FE8235;
+            transition: all 0.5s;
+
+        }
+    }
+
+    .footer__social {
+        padding-top: 10px;
+        font-size: 22px;
+        letter-spacing: 0.02em;
+    }
+
+    &__social-wrapper {
+        margin-top: 22px;
+    }
+
+    &__social-icon+&__social-icon {
+        margin-left: 14px;
+    }
+
+    .project__social-link {
+        width: 44px;
+        height: 44px;
+        transition: all 0.5s;
+
+        &:hover {
+            fill: #FE8235;
+            transition: all 0.5s;
+        }
+    }
+
+}
+
+@media (max-width:1222px) {
+    .footer {
+        &__wrapper {
+            grid-gap: 40px 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+    }
+
+}
+
+
+@media (max-width:1000px) {
+    .footer {
+        &__wrapper {
+            grid-gap: 40px 150px;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+
+        }
+
+        &__social-wrapper {
+            display: flex;
+        }
+    }
+
+}
+
+@media (max-width:740px) {
+    .footer {
+        padding: 90px 90px;
+
+        &__wrapper {
+            grid-gap: 40px 90px;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+        }
+    }
+
+}
+
+@media (max-width:580px) {
+    .footer {
+        padding: 90px 30px;
+
+        &__wrapper {
+            grid-gap: 40px 90px;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+        }
+    }
+
+}
+
+@media (max-width:500px) {
+    .footer {
+        padding: 90px 30px;
+
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__adris {
+            max-width: 100%;
+        }
+
+        &__menu-items {
+            display: none;
+        }
+    }
+
 }

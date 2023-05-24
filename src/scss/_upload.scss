@@ -1,0 +1,191 @@
+.upload {
+    .title {
+        @extend %title;
+        max-width: 700px;
+        @extend %Ultrabold;
+        font-size: 48px;
+    }
+
+    .text {
+        font-size: 32px;
+        line-height: 140%;
+        @extend %Medium;
+        max-width: 950px;
+        padding-top: 40px;
+    }
+
+    &__step-items {
+        padding-top: 140px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    &__step-item {
+        position: relative;
+        padding: 24px 24px;
+        background: #5224B5;
+        width: 360px;
+        height: 320px;
+
+        &:hover {
+            background: #FE8235;
+
+            .project__NFT-icon {
+                fill: black;
+            }
+
+            .upload__step-text {
+                color: black;
+            }
+        }
+    }
+
+    &__step-text {
+        font-size: 24px;
+        padding-top: 24px;
+        line-height: 28.8px;
+        max-width: 312px;
+    }
+
+    .upload__step-item:nth-child(1) {
+        &::before {
+            content: 'Step 1';
+        }
+    }
+
+    .upload__step-item:nth-child(2) {
+        margin-top: 80px;
+
+        &::before {
+            content: 'Step 2';
+        }
+    }
+
+    .upload__step-item:nth-child(3) {
+        margin-top: 160px;
+
+        &::before {
+            content: 'Step 3';
+        }
+    }
+
+    .upload__step-item:nth-child(6) {
+        margin-top: 140px;
+
+        &::before {
+            content: 'Step 6';
+        }
+    }
+
+    .upload__step-item:nth-child(5) {
+        margin-top: 240px;
+
+        &::before {
+            content: 'Step 5';
+        }
+    }
+
+    .upload__step-item:nth-child(4) {
+        margin-top: 320px;
+
+        &::before {
+            content: 'Step 4';
+        }
+    }
+
+    .upload__step-item:nth-child(1n) {
+        &::before {
+            position: absolute;
+            color: green;
+            font-size: 24px;
+            top: -60px;
+            left: 0;
+
+            &::after {
+                content: '';
+                background-image: url('img/upload/arrow-1.svg');
+                width: 341.5px;
+                height: 48px;
+            }
+        }
+    }
+
+    .project__NFT-icon {
+        margin-left: 0px;
+        height: 72px;
+        width: 72px;
+        fill: #FE8235;
+    }
+}
+
+@media (max-width:1220px) {
+    .upload {
+        &__step-items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__step-item {
+            width: 90%;
+        }
+
+        .upload__step-item:nth-child(6) {
+            margin-top: 240px;
+
+            &::before {
+                content: 'Step 6';
+            }
+        }
+
+        .upload__step-item:nth-child(5) {
+            margin-top: 140px;
+
+            &::before {
+                content: 'Step 5';
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .upload {
+        &__step-items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__step-item:nth-child(1n) {
+            margin-top: 60px !important;
+
+            &::before {
+                top: -28px !important;
+            }
+        }
+
+        &__step-items {
+            padding-top: 60px;
+        }
+
+        &__step-item {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .upload {
+        .title {
+            font-size: 27px;
+            line-height: 37px;
+            padding-top: 50px;
+        }
+
+        &__step-text {
+            font-size: 22px;
+            line-height: 24.8px;
+        }
+
+        .text {
+            font-size: 22px;
+        }
+    }
+}
