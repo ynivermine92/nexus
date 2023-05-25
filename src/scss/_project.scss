@@ -71,12 +71,14 @@
     }
 
     &__benefit-text {
-        font-size: 36px;
+        font-size: 32px;
         padding-top: 30px;
         max-width: 320px;
         padding-bottom: 80px;
+        font-size: 32px;
+        line-height: 140%;
         @extend %Medium;
-    }
+    }   
 
     &__benefit-text:last-child {
         max-width: 470px;
@@ -129,14 +131,34 @@
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:650px) {
     .project {
         &__title {
-            font-size: 38px;
+            font-size: 30px;
+            line-height: 40px;
         }
-
+        &__text{
+            font-size: 18px;
+            padding-bottom: 10px;
+            line-height: 30px;
+        }
         &__benefit-title {
             font-size: 38px;
+        }
+        &__benefit-title{
+            font-size: 30px;
+            line-height: 40px;
+            max-width: 400px;
+        }
+        &__benefit-text{
+            font-size: 18px !important;
+            padding-bottom: 0px;
+            line-height: 30px;
+            padding-bottom: 60px;
+            
+        }
+        &__benefit-text:last-child{
+            padding-top: 6px;
         }
     }
 }

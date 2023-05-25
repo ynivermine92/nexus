@@ -1,6 +1,6 @@
 .tabs {
     width: 100%;
-    margin-top: 150px;
+    padding-bottom: 82px;
 
     &__header {
         display: flex;
@@ -17,10 +17,10 @@
             font-size: 18px;
             @extend %Ultrabold;
             cursor: pointer;
-            transition: 0.5s;
+            transition: all 0.5s;
 
             &.active {
-                transition: 0.5s;
+                transition: all 0.5s;
                 color: #0A0A0A;
                 background: #7FFA8A;
                 box-shadow: 20px 0px 60px 0px rgba(238, 235, 239, 0.35);
@@ -51,6 +51,7 @@
 
     &:hover {
         transform: scale(1.04);
+        -webkit-transform: scale(1.1);
         overflow: hidden;
         transition: 0.5s;
     }
@@ -254,7 +255,8 @@
     .tabs {
         &__wrappr {
             display: grid;
-            gap: 12px 0px;
+            gap: 12px 10px;
+            height: 400px;
         }
 
         &__header-item {
@@ -265,7 +267,6 @@
             margin-right: -36px;
         }
     }
-
     .project__NFT-images {
         width: 100%;
     }

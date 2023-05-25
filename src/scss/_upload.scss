@@ -1,9 +1,13 @@
 .upload {
+    background: #1A1919;
+    padding-top: 68px;
+    padding-bottom: 90px;
     .title {
         @extend %title;
         max-width: 700px;
         @extend %Ultrabold;
         font-size: 48px;
+        padding-top: 0px    ;
     }
 
     .text {
@@ -167,6 +171,22 @@
 
         &__step-item {
             width: 100%;
+        }
+    }
+}
+@media (max-width:650px) {
+    .upload{
+        .title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        .text{
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .text + .text{
+            padding-top: 6px;
+
         }
     }
 }

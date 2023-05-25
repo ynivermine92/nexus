@@ -277,11 +277,9 @@ body.dark {
 .top__wrapper {
   background-image: url("../img/top/top.jpg");
   background-repeat: no-repeat;
-  margin: 0 auto;
+  background-position: center;
   padding-top: 615px;
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .top__conent {
@@ -300,8 +298,9 @@ body.dark {
 }
 
 .top .text {
-  font-size: 24px;
-  max-width: 450px;
+  font-size: 30px;
+  line-height: 160%;
+  max-width: 600px;
 }
 
 .top__user-verification {
@@ -478,10 +477,12 @@ body.dark {
 }
 
 .project__benefit-text {
-  font-size: 36px;
+  font-size: 32px;
   padding-top: 30px;
   max-width: 320px;
   padding-bottom: 80px;
+  font-size: 32px;
+  line-height: 140%;
 }
 
 .project__benefit-text:last-child {
@@ -495,7 +496,7 @@ body.dark {
 
 .tabs {
   width: 100%;
-  margin-top: 150px;
+  padding-bottom: 82px;
 }
 
 .tabs__header {
@@ -513,15 +514,15 @@ body.dark {
   padding: 24px;
   font-size: 18px;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tabs__header-item.active {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   color: #0A0A0A;
   background: #7FFA8A;
   -webkit-box-shadow: 20px 0px 60px 0px rgba(238, 235, 239, 0.35);
@@ -555,9 +556,9 @@ body.dark {
 }
 
 .project__NFT:hover {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
+  -ms-transform: scale(1.04);
+      transform: scale(1.04);
+  -webkit-transform: scale(1.1);
   overflow: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -700,9 +701,16 @@ body.dark {
   }
 }
 
+.upload {
+  background: #1A1919;
+  padding-top: 68px;
+  padding-bottom: 90px;
+}
+
 .upload .title {
   max-width: 700px;
   font-size: 48px;
+  padding-top: 0px;
 }
 
 .upload .text {
@@ -831,7 +839,7 @@ body.dark {
   max-width: 800px;
   font-size: 48px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 0px;
   display: block;
   padding-bottom: 60px;
 }
@@ -839,6 +847,7 @@ body.dark {
 .changes__form-input {
   width: 632px;
   height: 65px;
+  cursor: pointer;
   margin-bottom: 60px;
   background-color: transparent;
   border: 1px solid #FE8235;
@@ -848,6 +857,11 @@ body.dark {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding-left: 32px;
+}
+
+.changes__form-input:hover {
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+          box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
 .changes__form-input::-webkit-input-placeholder {
@@ -894,14 +908,26 @@ body.dark {
   font-size: 18px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: white;
-  background-color: #FE8235;
+  color: #FE8235;
+  background-color: transparent;
+  border: 1px solid #FE8235;
   margin-left: 16px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.changes__form-btn:hover {
+  color: white;
+  background: #FE8235;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .changes .changes__images {
   background-image: url("../img/changes/test.png");
-  height: 678px;
+  height: 668px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -971,7 +997,13 @@ select:-webkit-autofill:focus {
 }
 
 .footer {
-  padding: 90px 140px;
+  padding: 88px 140px 100px 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #5224B5;
 }
 
@@ -994,7 +1026,6 @@ select:-webkit-autofill:focus {
 
 .footer__menu-items {
   padding-top: 10px;
-  margin-bottom: 16px;
   font-size: 22px;
   letter-spacing: 0.02em;
 }
@@ -1016,6 +1047,7 @@ select:-webkit-autofill:focus {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .footer__menu-link:hover {
@@ -1041,6 +1073,7 @@ select:-webkit-autofill:focus {
 
 .footer .project__social-link {
   width: 44px;
+  cursor: pointer;
   height: 44px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -1634,10 +1667,79 @@ select:-webkit-autofill:focus {
 }
 
 @media (max-width: 650px) {
+  .top__wrapper {
+    padding-top: 280px;
+  }
+
+  .top__user-verification {
+    margin-top: 60px;
+  }
+
   .top h1 {
-    font-size: 42px;
-    line-height: 44px;
-    padding-bottom: 30px;
+    line-height: 30px;
+    padding-bottom: 0px;
+  }
+
+  .top__conent {
+    padding-bottom: 50px;
+  }
+
+  .top .title {
+    font-size: 30px;
+  }
+
+  .top .text {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .top img {
+    height: 60px;
+    width: 120px;
+  }
+
+  .top__supporting {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 0px 0px;
+  }
+
+  .top__supporting-images {
+    height: 60px !important;
+    width: 150px !important;
+    margin-right: -28px !important;
+  }
+
+  .project__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .project__text {
+    font-size: 18px;
+    padding-bottom: 10px;
+    line-height: 30px;
+  }
+
+  .project__benefit-title {
+    font-size: 38px;
+  }
+
+  .project__benefit-title {
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 400px;
+  }
+
+  .project__benefit-text {
+    font-size: 18px !important;
+    padding-bottom: 0px;
+    line-height: 30px;
+    padding-bottom: 60px;
+  }
+
+  .project__benefit-text:last-child {
+    padding-top: 6px;
   }
 
   .tabs .project__NFT {
@@ -1655,11 +1757,29 @@ select:-webkit-autofill:focus {
             justify-content: center;
   }
 
+  .upload .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .upload .text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .upload .text + .text {
+    padding-top: 6px;
+  }
+
   .changes__form-input {
     width: 100%;
     margin-bottom: 30px;
     font-size: 14px;
     padding-left: 10px;
+  }
+
+  .changes .changes__images {
+    height: 320px;
   }
 
   .changes__form-btn {
@@ -1669,7 +1789,25 @@ select:-webkit-autofill:focus {
   }
 
   .changes .title {
-    font-size: 32px;
+    font-size: 30px;
+  }
+
+  .changes ::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  .changes :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+
+  .changes ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+
+  .changes :-ms-input-placeholder {
+    text-align: center;
   }
 }
 
@@ -1702,14 +1840,10 @@ select:-webkit-autofill:focus {
     max-width: 100%;
   }
 
-  .top__supporting-images {
-    margin-right: -26px !important;
-    width: 270px !important;
-  }
-
   .tabs__wrappr {
     display: grid;
-    gap: 12px 0px;
+    gap: 12px 10px;
+    height: 400px;
   }
 
   .tabs__header-item {
@@ -1778,12 +1912,12 @@ select:-webkit-autofill:focus {
   .navbar {
     padding: 0 10px;
   }
+}
 
-  .project__title {
-    font-size: 38px;
-  }
-
-  .project__benefit-title {
-    font-size: 38px;
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
   }
 }
