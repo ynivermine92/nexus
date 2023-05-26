@@ -31,8 +31,8 @@
         flex-direction: column;
         transition: 0.5s;
 
-        &:hover {
-            background: #FE8235;
+        &:hover,&:focus, &:active {
+            background-color: #FE8235;
             transition: 0.5s;
 
             .project__advantage-svg {

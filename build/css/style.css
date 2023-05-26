@@ -434,18 +434,24 @@ body.dark {
   transition: 0.5s;
 }
 
-.project__advantage-item:hover {
-  background: #FE8235;
+.project__advantage-item:hover,
+.project__advantage-item:focus,
+.project__advantage-item:active {
+  background-color: #FE8235;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.project__advantage-item:hover .project__advantage-svg {
+.project__advantage-item:hover .project__advantage-svg,
+.project__advantage-item:focus .project__advantage-svg,
+.project__advantage-item:active .project__advantage-svg {
   fill: #000000;
 }
 
-.project__advantage-item:hover .project__advantage-text {
+.project__advantage-item:hover .project__advantage-text,
+.project__advantage-item:focus .project__advantage-text,
+.project__advantage-item:active .project__advantage-text {
   color: #0A0A0A;
 }
 
