@@ -2,12 +2,13 @@
     background: #1A1919;
     padding-top: 68px;
     padding-bottom: 90px;
+
     .title {
         @extend %title;
         max-width: 700px;
         @extend %Ultrabold;
         font-size: 48px;
-        padding-top: 0px    ;
+        padding-top: 0px;
     }
 
     .text {
@@ -25,7 +26,7 @@
 
     }
 
-    &__NFT-icon{
+    &__NFT-icon {
         height: 72px;
         width: 72px;
         margin-bottom: 27px;
@@ -39,6 +40,7 @@
         background: #5224B5;
         width: 360px;
         height: 320px;
+
         &:hover {
             background: #fe8235;
             transition: 0.6s;
@@ -159,6 +161,16 @@
     }
 }
 
+@media (max-width:890px) {
+    .upload{
+        &__step-text {
+            font-size: 20px;
+        }
+    }
+}
+
+
+
 @media (max-width:768px) {
     .upload {
         &__step-items {
@@ -182,17 +194,20 @@
         }
     }
 }
+
 @media (max-width:650px) {
-    .upload{
+    .upload {
         .title {
             font-size: 30px;
             line-height: 40px;
         }
-        .text{
+
+        .text {
             font-size: 18px;
             line-height: 30px;
         }
-        .text + .text{
+
+        .text+.text {
             padding-top: 6px;
 
         }

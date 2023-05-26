@@ -1521,6 +1521,12 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 890px) {
+  .upload__step-text {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 870px) {
   .changes__form-input {
     width: 400px;
