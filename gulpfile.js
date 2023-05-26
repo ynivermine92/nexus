@@ -139,7 +139,7 @@ function clean(params) {
     return del(path.clean)
 }
 
-// let build = gulp.series(clean, gulp.parallel(html, js, css, images, fonts))
+/* let build = gulp.series(clean, gulp.parallel(html, js, css, images, fonts,img)); */
 
 // Without clean build
 let build = gulp.series(gulp.parallel(html, js, css, images, fonts,img))
