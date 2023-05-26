@@ -437,7 +437,7 @@ body.dark {
 .project__advantage-item:hover,
 .project__advantage-item:focus,
 .project__advantage-item:active {
-  background-color: #FE8235;
+  background-color: #000000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
