@@ -728,6 +728,13 @@ body.dark {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.upload__NFT-icon {
+  height: 72px;
+  width: 72px;
+  margin-bottom: 27px;
+  fill: #fe8235;
+}
+
 .upload__step-item {
   position: relative;
   padding: 24px 24px;
@@ -737,15 +744,18 @@ body.dark {
 }
 
 .upload__step-item:hover {
-  background: #FE8235;
+  background: #fe8235;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
-.upload__step-item:hover .project__NFT-icon {
-  fill: black;
+.upload__step-item:hover .upload__NFT-icon {
+  fill: #000000;
 }
 
-.upload__step-item:hover .upload__step-text {
-  color: black;
+.upload__step-item:hover .upload__advantage-text {
+  color: #0A0A0A;
 }
 
 .upload__step-text {
