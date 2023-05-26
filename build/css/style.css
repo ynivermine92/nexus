@@ -134,6 +134,8 @@ body.dark {
   }
 }
 
+/* mob hover */
+
 .header {
   margin-top: 30px;
   position: absolute;
@@ -429,16 +431,16 @@ body.dark {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .project__advantage-item:hover {
-  background: #FE8235;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  background: #fe8235;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .project__advantage-item:hover .project__advantage-svg {
