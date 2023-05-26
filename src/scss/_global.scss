@@ -47,6 +47,22 @@ body {
         opacity: 1;
     }
 }
+
+
+@media (max-width:650px) {
+    .project__advantage-item{
+        pointer-events: none;    
+    }
+    .upload__step-item{
+        pointer-events: none;    
+    }
+}
+
+
+
+
+
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     select:focus, textarea:focus, input:focus {
             font-size: 16px;

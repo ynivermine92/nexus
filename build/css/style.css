@@ -434,24 +434,18 @@ body.dark {
   transition: 0.5s;
 }
 
-.project__advantage-item:hover,
-.project__advantage-item:focus,
-.project__advantage-item:active {
-  background-color: #000000;
+.project__advantage-item:hover {
+  background: #FE8235;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.project__advantage-item:hover .project__advantage-svg,
-.project__advantage-item:focus .project__advantage-svg,
-.project__advantage-item:active .project__advantage-svg {
+.project__advantage-item:hover .project__advantage-svg {
   fill: #000000;
 }
 
-.project__advantage-item:hover .project__advantage-text,
-.project__advantage-item:focus .project__advantage-text,
-.project__advantage-item:active .project__advantage-text {
+.project__advantage-item:hover .project__advantage-text {
   color: #0A0A0A;
 }
 
@@ -562,9 +556,9 @@ body.dark {
 }
 
 .project__NFT:hover {
-  -ms-transform: scale(1.04);
-      transform: scale(1.04);
-  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.05);
+      transform: scale(1.05);
+  -webkit-transform: scale(1.05);
   overflow: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1673,6 +1667,14 @@ select:-webkit-autofill:focus {
 }
 
 @media (max-width: 650px) {
+  .project__advantage-item {
+    pointer-events: none;
+  }
+
+  .upload__step-item {
+    pointer-events: none;
+  }
+
   .top__wrapper {
     padding-top: 280px;
   }
@@ -1742,10 +1744,6 @@ select:-webkit-autofill:focus {
     padding-bottom: 0px;
     line-height: 30px;
     padding-bottom: 60px;
-  }
-
-  .project__benefit-text:last-child {
-    padding-top: 6px;
   }
 
   .tabs .project__NFT {
