@@ -1883,7 +1883,6 @@ select:-webkit-autofill:focus {
   .upload .title {
     font-size: 27px;
     line-height: 37px;
-    padding-top: 50px;
   }
 
   .upload__step-text {
