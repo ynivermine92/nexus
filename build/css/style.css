@@ -356,9 +356,9 @@ body.dark {
   margin-top: 20px;
 }
 
-.top__box {
+.top__inner {
   background: #7FFA8A;
-  padding: 90px 134px;
+  padding: 90px 0px;
 }
 
 .top__supporting {
@@ -368,31 +368,33 @@ body.dark {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.top__supporting-projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 250px;
 }
 
-.top img {
-  width: 210px;
-  height: 103px;
+.top__supporting-img--1 {
+  width: 245.99px;
+  height: 69.86px;
 }
 
-.top__supporting-images {
-  margin-right: 15px !important;
-  width: 350px !important;
+.top__supporting-img--2 {
+  width: 330.15px;
+  height: 103.51px;
+}
+
+.top__supporting-img--3 {
+  width: 191.84px;
+  height: 60.68px;
+}
+
+.top__supporting-img--4 {
+  width: 268.59px;
+  height: 80px;
+}
+
+.top__supporting-projects--4 {
+  padding-right: 34px;
 }
 
 .project__title {
@@ -1201,11 +1203,15 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media (max-width: 1300px) {
-  .top img {
-    margin-left: 50px;
+@media (max-width: 1420px) {
+  .top__supporting {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
   }
+}
 
+@media (max-width: 1300px) {
   .project__advantage-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1278,21 +1284,6 @@ select:-webkit-autofill:focus {
   .top h1 {
     font-size: 50px;
     line-height: 80px;
-  }
-
-  .top img {
-    margin-left: 0px;
-  }
-
-  .top__supporting {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 45px 30px;
-  }
-
-  .top__supporting-images {
-    margin-right: -60px !important;
-    width: 350px !important;
   }
 
   .tabs__wrappr {
@@ -1533,19 +1524,9 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media (max-width: 820px) {
-  .top__supporting {
-    display: block;
-    width: 100%;
-  }
-
-  .top__supporting-images {
-    margin-right: -72px !important;
-    width: 350px !important;
-  }
-
-  .top__supporting-img {
-    margin-left: 20px !important;
+@media (max-width: 850px) {
+  .top__inner {
+    padding: 40px 0px;
   }
 
   .top__box {
@@ -1578,7 +1559,9 @@ select:-webkit-autofill:focus {
   .top__user-verification {
     max-width: inherit;
   }
+}
 
+@media (max-width: 820px) {
   .tabs .project__NFT {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1684,6 +1667,32 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 700px) {
+  .top__supporting-img--1 {
+    width: 172.2px;
+    height: 48.86px;
+  }
+
+  .top__supporting-img--2 {
+    width: 231.1px;
+    height: 82.51px;
+  }
+
+  .top__supporting-img--3 {
+    width: 127.35px;
+    height: 48.68px;
+  }
+
+  .top__supporting-img--4 {
+    width: 188.01px;
+    height: 64px;
+  }
+
+  .top__supporting-projects--4 {
+    padding-right: 34px;
+  }
+}
+
 @media (max-width: 650px) {
   .project__advantage-item {
     pointer-events: none;
@@ -1695,6 +1704,10 @@ select:-webkit-autofill:focus {
 
   .top__wrapper {
     padding-top: 280px;
+  }
+
+  .top__inner {
+    padding: 25px 0px;
   }
 
   .top__user-verification {
@@ -1719,21 +1732,8 @@ select:-webkit-autofill:focus {
     margin-top: 20px;
   }
 
-  .top img {
-    height: 60px;
-    width: 120px;
-  }
-
-  .top__supporting {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 0px 0px;
-  }
-
-  .top__supporting-images {
-    height: 60px !important;
-    width: 150px !important;
-    margin-right: -28px !important;
+  .top .top__box {
+    padding: 0px;
   }
 
   .project__title {
@@ -1833,6 +1833,12 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 610px) {
+  .top__supporting-projects--4 {
+    padding-right: 24px;
+  }
+}
+
 @media (max-width: 580px) {
   .footer {
     padding: 90px 30px;
@@ -1918,6 +1924,32 @@ select:-webkit-autofill:focus {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+}
+
+@media (max-width: 462px) {
+  .top__supporting-img--1 {
+    width: 110.2px;
+    height: 35.86px;
+  }
+
+  .top__supporting-img--2 {
+    width: 130.1px;
+    height: 70.51px;
+  }
+
+  .top__supporting-img--3 {
+    width: 90.35px;
+    height: 40.68px;
+  }
+
+  .top__supporting-img--4 {
+    width: 110.01px;
+    height: 50px;
+  }
+
+  .top__supporting-projects--4 {
+    padding-right: 10px;
   }
 }
 
