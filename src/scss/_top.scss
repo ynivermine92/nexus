@@ -9,6 +9,7 @@
 
     &__conent {
         display: flex;
+        justify-content: space-between;
         padding-bottom: 100px;
     }
 
@@ -68,42 +69,6 @@
     &__link-verification+.top__link-verification {
         margin-top: 20px;
     }
-
-    &__inner {
-        background: #7FFA8A;
-        padding: 90px 0px;
-    }
-
-    &__supporting {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__supporting-img--1{
-        width: 245.99px;
-        height: 69.86px;
-    }
-    &__supporting-img--2{
-        width: 330.15px;
-        height: 103.51px;
-    }
-    &__supporting-img--3{
-        width: 191.84px;
-        height: 60.68px;
-        
-    }
-    &__supporting-img--4{
-        width: 268.59px;
-        height: 80px;
-    }
-
-    &__supporting-projects--4{
-       padding-right: 34px;
-    }
-
-
-
-    
 }
 
 @media (max-width: 1420px) {
@@ -140,9 +105,6 @@
             padding: 40px 0px;
         }
 
-        &__box {
-            padding: 40px 0px;
-        }
 
         &__conent {
             flex-direction: column;
@@ -170,33 +132,6 @@
     }
 }
 
-@media (max-width:700px) {
-    .top{
-        &__supporting-img--1{
-            width: 172.2px;
-            height: 48.86px;
-        }
-        &__supporting-img--2{
-            width: 231.10px;
-            height: 82.51px;
-        }
-        &__supporting-img--3{
-            width: 127.35px;
-            height: 48.68px;
-            
-        }
-        &__supporting-img--4{
-            width: 188.01px;
-            height: 64px;
-        }
-    
-        &__supporting-projects--4{
-           padding-right: 34px;
-        }
-    
-
-    }
-}
 
 
 
@@ -233,18 +168,10 @@
             margin-top: 20px;
 
         }
-        .top__box{
-            padding: 0px;
-        }
+   
     }
 }
-@media (max-width:610px) {
-    .top {
-        &__supporting-projects--4{
-            padding-right: 24px;
-         }
-    }
-}
+
 @media (max-width:500px) {
     .top {
         &__link-verification {
@@ -253,33 +180,6 @@
     }
 }
 
-@media (max-width:462px) {
-    .top{
-        &__supporting-img--1{
-            width: 110.2px;
-            height: 35.86px;
-        }
-        &__supporting-img--2{
-            width: 130.10px;
-            height: 70.51px;
-        }
-        &__supporting-img--3{
-            width: 90.35px;
-            height: 40.68px;
-            
-        }
-        &__supporting-img--4{
-            width: 110.01px;
-            height: 50px;
-        }
-    
-        &__supporting-projects--4{
-           padding-right: 10px;
-        }
-    
-    
-    }
 
-}
 
 
